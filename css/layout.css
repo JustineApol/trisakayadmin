@@ -1,0 +1,105 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+body{
+    min-height: 100vh;
+}
+header{
+    position: fixed;
+    top: 0; left: 0; right:0;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #333;
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 25px;
+    color: #333;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background: #0886c9;
+    color: #fff;
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: #fff;
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0,.1);
+}
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+.buttons{
+	margin-left: 200px;
+}
+button{
+	margin-left: 100px;
+	width: 200px;
+	padding: 30px 0;
+	text-align: center;
+	margin: 5px 15px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 5px solid #0886c9;
+	background: transparent;
+	color:#333;
+	cursor:pointer;
+	position: relative;
+	overflow: hidden ;
+    margin-top: 100px;
+    
+
+}
+column-span{
+	background: #0886c9;
+	height: 100%;
+	width: 0%;
+	border-radius: 50px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	transition: 0.5s;
+   color: #fff;
+}
+button:hover column-span{
+	width: 100%;
+}
+button:hover{
+	border: none;
+}
+.buttons .back{
+    background-color: red;
+}
+
